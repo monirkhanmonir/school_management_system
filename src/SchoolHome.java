@@ -88,6 +88,11 @@ public class SchoolHome extends javax.swing.JFrame {
         );
 
         jPanel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon_image/img13.jpg"))); // NOI18N
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -356,6 +361,12 @@ public class SchoolHome extends javax.swing.JFrame {
 
         
     }//GEN-LAST:event_jPanel12MouseClicked
+
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+       
+        new StudentOperation().setVisible(true);
+        
+    }//GEN-LAST:event_jPanel8MouseClicked
      //JOptionPane.showMessageDialog(null, new SchoolHome().teacherShowName);
    
             

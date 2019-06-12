@@ -179,33 +179,31 @@ public class AdminLogin extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String name = userName.getText();
         String psd = new String(userpassword.getPassword());
-       
-        
-       
+
         try {
 
             Statement st = con.createStatement();
-            String sql = "SELECT type FROM school_management.users where User_name ='"+name+"' and password = '"+psd+"';";
-            
+            String sql = "SELECT type FROM school_management.users where User_name ='" + name + "' and password = '" + psd + "';";
+
             ResultSet rs = st.executeQuery(sql);
-            
-            if(rs.next()){
+
+            if (rs.next()) {
                 String str1 = rs.getString("type");
-                
-                if(str1.equals("Students")){
-            new StudentsProfile().setVisible(true);
-               this.setVisible(false);
-           }else if(str1.equals("Teachers")){
-             new ExamResult().setVisible(true);
-             this.setVisible(false);
-           }else if(str1.equals("")) {
-               new SchoolHome().setVisible(true);
-                this.setVisible(false);
-           }
-                
-            }else{
-            JOptionPane.showMessageDialog(null, "User not found. Please create a user");
-            
+
+                if (str1.equals("Students")) {
+                    new StudentsProfile().setVisible(true);
+                    this.setVisible(false);
+                } else if (str1.equals("Teachers")) {
+                    new TeachersPanel().setVisible(true);
+                    this.setVisible(false);
+                } else if (str1.equals("Admin")) {
+                    new SchoolHome().setVisible(true);
+                    this.setVisible(false);
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(null, "User not found. Please create a user");
+
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "SQL fail");

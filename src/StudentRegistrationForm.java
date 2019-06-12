@@ -1,6 +1,9 @@
 
 import java.sql.Connection;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class StudentRegistrationForm extends javax.swing.JFrame {
@@ -51,6 +54,8 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel2 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Students registration Form");
@@ -66,7 +71,7 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 0)));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        jLabel3.setText("Name : ");
+        jLabel3.setText("ID :");
         jLabel3.setToolTipText("");
 
         jTextField2.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
@@ -145,7 +150,7 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
         jCheckBox4.setToolTipText("");
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        jLabel11.setText("Date : ");
+        jLabel11.setText("Date  of birth :");
         jLabel11.setToolTipText("");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
@@ -170,6 +175,8 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("Reset");
 
+        jDateChooser1.setDateFormatString("dd/mm/yyyy");
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 51, 51));
         jLabel2.setText("Select Registration : ");
@@ -177,6 +184,13 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
         jComboBox2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jComboBox2.setForeground(new java.awt.Color(255, 0, 0));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Students", "Teachers" }));
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jLabel13.setText("Name : ");
+        jLabel13.setToolTipText("");
+
+        jTextField7.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        jTextField7.setToolTipText("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -203,7 +217,8 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
                             .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -236,7 +251,8 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jCheckBox3)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(jCheckBox4))))
+                                                .addComponent(jCheckBox4)))
+                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(124, 124, 124))))
         );
@@ -254,6 +270,10 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -320,7 +340,7 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (con != null) {
             try {
-                String st_name = jTextField2.getText();
+                String st_name = jTextField7.getText();
             String st_userName = jTextField3.getText();
             String email = null;
             
@@ -336,7 +356,7 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
             
             }
             
-            
+            String id = jTextField2.getText();
             String age = jTextField5.getText();
             String phone = jTextField6.getText();
             String gender = null;
@@ -352,21 +372,35 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
 
             String clas = jComboBox1.getSelectedItem().toString();
 
-            String skills = "JAVA";
-
-            String date = jDateChooser1.getDate().toString();
+            ArrayList<String> skills = new ArrayList();
+            if(jCheckBox1.isSelected()){
+                skills.add("HTML");
+            }
+            if(jCheckBox2.isSelected()){
+                skills.add("JAVA");
+            }
+            if(jCheckBox3.isSelected()){
+                 skills.add("PHP");
+            }
+            if(jCheckBox4.isSelected()){
+                 skills.add("C++");
+            }
+            
+                SimpleDateFormat date = new SimpleDateFormat("dd/mm/yyyy");
+                String newDate = date.format(jDateChooser1.getDate());
+            //Date date = jDateChooser1.getDate();
             String address = jTextField1.getText();
             String select = jComboBox2.getSelectedItem().toString();
 
-            if (!st_name.isEmpty() && !st_userName.isEmpty() && !email.isEmpty() && !age.isEmpty() && !phone.isEmpty() && !gender.isEmpty() && !date.isEmpty()) {
+            if (!st_name.isEmpty() && !st_userName.isEmpty() && !email.isEmpty() && !age.isEmpty() && !phone.isEmpty() && !gender.isEmpty()) {
                 try {
                     Statement st = con.createStatement();
                     if (select.equals("Students")) {
-                        String sql = "INSERT INTO st_registration (name,user_name,email,age,Phone,gender,class,skills,date,address)VALUES('" + st_name + "','" + st_userName + "','" + email + "','" + age + "','" + phone + "','" + gender + "','" + clas + "','" + skills + "','" + date + "','" + address + "')";
+                        String sql = "INSERT INTO st_registration (id,name,user_name,email,age,Phone,gender,class,skills,date,address)VALUES('"+id+"','" + st_name + "','" + st_userName + "','" + email + "','" + age + "','" + phone + "','" + gender + "','" + clas + "','" + skills + "','" + newDate + "','" + address + "')";
                         st.execute(sql);
                         JOptionPane.showMessageDialog(null, "Srudent successfully added");
                     } else if (select.equals("Teachers")) {
-                        String sql = "INSERT INTO teacher_registration (name,user_name,email,age,Phone,gender,class,skills,date,address)VALUES('" + st_name + "','" + st_userName + "','" + email + "','" + age + "','" + phone + "','" + gender + "','" + clas + "','" + skills + "','" + date + "','" + address + "')";
+                        String sql = "INSERT INTO teacher_registration (name,user_name,email,age,Phone,gender,class,skills,date,address)VALUES('" + st_name + "','" + st_userName + "','" + email + "','" + age + "','" + phone + "','" + gender + "','" + clas + "','" + skills + "','" + newDate + "','" + address + "')";
                         st.execute(sql);
                         JOptionPane.showMessageDialog(null, "Teacher successfully added");
                     } else {
@@ -452,6 +486,7 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -470,5 +505,6 @@ public class StudentRegistrationForm extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }

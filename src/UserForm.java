@@ -148,6 +148,11 @@ public class UserForm extends javax.swing.JFrame {
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Teachers");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -255,19 +260,20 @@ public class UserForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        if (con != null) {
-            
-            
-            
-            
+        if (con != null) {      
             
             try {
                 int check_id =Integer.parseInt(jTextField1.getText());
             int id = 0;
             
             try {
+             
                 Statement st =  con.createStatement();
-                String id_sql = "SELECT* FROM st_registration where id='"+check_id+"'";
+                String id_sql=null;
+                
+                id_sql = "SELECT* FROM st_registration where id='"+check_id+"'";
+                
+                
                 ResultSet rs = st.executeQuery(id_sql);
                 if(rs.isBeforeFirst()){
                     id = check_id;
@@ -280,7 +286,15 @@ public class UserForm extends javax.swing.JFrame {
             }
             
             
+            String user_tupe = "";
             
+            if(jRadioButton1.isSelected()){
+                user_tupe = jRadioButton1.getText();
+            }else if(jRadioButton2.isSelected()){
+                user_tupe = jRadioButton2.getText();
+            }else if(jRadioButton3.isSelected()){
+                user_tupe = jRadioButton3.getText();
+            }
             
             String name = jTextField2.getText();
             String user = jTextField3.getText();
@@ -294,17 +308,9 @@ public class UserForm extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Password Should be same");
             }
             
-            String user_tupe = "";
             
-            if(jRadioButton1.isSelected()){
-                user_tupe = jRadioButton1.getText();
-            }else if(jRadioButton2.isSelected()){
-                user_tupe = jRadioButton2.getText();
-            }else if(jRadioButton3.isSelected()){
-                user_tupe = jRadioButton3.getText();
-            }
             
-            JOptionPane.showMessageDialog(null,user_tupe);
+           // JOptionPane.showMessageDialog(null,user_tupe);
             if(id !=0&&!name.isEmpty()&&!user.isEmpty()&&!psd.isEmpty()&&!user_tupe.isEmpty()){
                   try {
                 Statement st = con.createStatement();
@@ -352,6 +358,10 @@ public class UserForm extends javax.swing.JFrame {
         new AdminLogin().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments

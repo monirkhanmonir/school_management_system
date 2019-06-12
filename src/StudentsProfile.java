@@ -346,6 +346,7 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel14.setText("Name :");
         jLabel14.setToolTipText("");
 
+        jTextField11.setEditable(false);
         jTextField11.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,15 +378,19 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Bangla :");
 
+        jTextField12.setEditable(false);
         jTextField12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField12.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField13.setEditable(false);
         jTextField13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField13.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField14.setEditable(false);
         jTextField14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField14.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField15.setEditable(false);
         jTextField15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField15.setForeground(new java.awt.Color(0, 0, 102));
 
@@ -393,9 +398,11 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("English : ");
 
+        jTextField16.setEditable(false);
         jTextField16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField16.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField17.setEditable(false);
         jTextField17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField17.setForeground(new java.awt.Color(0, 0, 102));
 
@@ -407,9 +414,11 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Social Science :");
 
+        jTextField18.setEditable(false);
         jTextField18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField18.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField19.setEditable(false);
         jTextField19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField19.setForeground(new java.awt.Color(0, 0, 102));
 
@@ -417,6 +426,7 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("General Science :");
 
+        jTextField20.setEditable(false);
         jTextField20.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField20.setForeground(new java.awt.Color(0, 0, 102));
         jTextField20.addActionListener(new java.awt.event.ActionListener() {
@@ -425,6 +435,7 @@ public class StudentsProfile extends javax.swing.JFrame {
             }
         });
 
+        jTextField21.setEditable(false);
         jTextField21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField21.setForeground(new java.awt.Color(0, 0, 102));
 
@@ -432,9 +443,11 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Agriculture :");
 
+        jTextField22.setEditable(false);
         jTextField22.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField22.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField23.setEditable(false);
         jTextField23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField23.setForeground(new java.awt.Color(0, 0, 102));
 
@@ -443,21 +456,27 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel25.setText("GPA");
         jLabel25.setToolTipText("");
 
+        jTextField24.setEditable(false);
         jTextField24.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField24.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField25.setEditable(false);
         jTextField25.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField25.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField26.setEditable(false);
         jTextField26.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField26.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField27.setEditable(false);
         jTextField27.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField27.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField28.setEditable(false);
         jTextField28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField28.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField29.setEditable(false);
         jTextField29.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField29.setForeground(new java.awt.Color(0, 0, 102));
 
@@ -466,11 +485,18 @@ public class StudentsProfile extends javax.swing.JFrame {
         jLabel26.setText("Total Marks :");
         jLabel26.setToolTipText("");
 
+        jTextField30.setEditable(false);
         jTextField30.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField30.setForeground(new java.awt.Color(0, 0, 102));
 
+        jTextField31.setEditable(false);
         jTextField31.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField31.setForeground(new java.awt.Color(0, 0, 102));
+        jTextField31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField31ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -574,6 +600,7 @@ public class StudentsProfile extends javax.swing.JFrame {
                 .addGap(490, 490, 490))
         );
 
+        jTextField32.setEditable(false);
         jTextField32.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextField32.setToolTipText("");
 
@@ -784,7 +811,7 @@ public class StudentsProfile extends javax.swing.JFrame {
                     
 
             } else {
-                JOptionPane.showMessageDialog(null, "No row selected");
+                JOptionPane.showMessageDialog(null, "Result not published");
             }
 
         } catch (SQLException ex) {
@@ -807,18 +834,19 @@ public class StudentsProfile extends javax.swing.JFrame {
             return "C";
         } else if (x >= 33 && x <= 39) {
             return "D";
-        } else if (x > 33) {
-            return "F";
         } else {
-            return "false";
+            return "Fail";
         }
-
     }
 
 
     private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField31ActionPerformed
 
     /**
      * @param args the command line arguments
