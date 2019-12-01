@@ -1,1 +1,1 @@
-<h2>School Management System<h2>
+#School Management System
